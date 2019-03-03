@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xadevpos.demo.mapper.PermissionMapper">
+
+    <resultMap id="BaseResultMap" type="com.xadevpos.demo.model.Permission">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="pid" jdbcType="BIGINT" property="pid" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="value" jdbcType="VARCHAR" property="value" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+        <result column="uri" jdbcType="VARCHAR" property="uri" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+     id, pid, name, value, icon, type, uri, status, create_time, sort
+    </sql>
+    <insert id="insert" parameterType="com.xadevpos.demo.model.Permission">
+        insert into db_permission (pid, name, value,
+        icon, type, uri, status,
+        create_time, sort)
+        values (#{pid}, #{name}, #{value},
+        #{icon}, #{type}, #{uri}, #{status},
+        #{createTime}, #{sort})
+    </insert>
+
+    <select id="getPermissionList" resultType="com.xadevpos.demo.model.Permission">
+      select p.* from db_admin a
+            inner join db_admin_role_relation arr on a.id = arr.admin_id
+            inner join db_role_permission_relation rpr on rpr.role_id = arr.role_id
+            inner join db_permission p on p.id = rpr.permission_id
+            where a.id = #{adminId}
+    </select>
+
+    <select id="getURLList" resultType="java.lang.String">
+      select p.uri from db_admin a
+            inner join db_admin_role_relation arr on a.id = arr.admin_id
+            inner join db_role_permission_relation rpr on rpr.role_id = arr.role_id
+            inner join db_permission p on p.id = rpr.permission_id
+            where a.id = #{adminId} and p.uri is not null
+    </select>
+</mapper>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xadevpos.demo.mapper.AdminMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.xadevpos.demo.model.Admin">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, username, password, icon, email, nick_name, note, create_time, status
+  </sql>
+    <insert id="insert" parameterType="com.xadevpos.demo.model.Admin">
+         insert into db_admin (username, password, icon,
+                                 email, nick_name, note,
+                                 create_time,status
+                               )
+        values (#{username}, #{password}, #{icon},
+         #{email}, #{nickName}, #{note},
+         #{createTime},#{status}
+      )
+
+    </insert>
+
+    <update id="update">
+          update db_admin
+              set username = #{username},
+              password = #{password},
+              icon = #{icon},
+              email = #{email},
+              nick_name = #{nickName},
+              note = #{note},
+              create_time = #{createTime},
+              status = #{status}
+          where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from db_admin
+           where id = #{id}
+    </delete>
+
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from db_admin
+        where id = #{id}
+    </select>
+    <select id="find" resultType="com.xadevpos.demo.model.Admin">
+        select * from db_admin
+    </select>
+    <select id="selectByUsername" resultType="com.xadevpos.demo.model.Admin">
+        select
+        <include refid="Base_Column_List" />
+        from db_admin
+        where username = #{username}
+    </select>
+    <select id="selectByUsernameAndPassword" resultType="com.xadevpos.demo.model.Admin">
+        select
+        <include refid="Base_Column_List" />
+        from db_admin
+        where username = #{username} and password = #{password}
+
+    </select>
+
+
+</mapper>

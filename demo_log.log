@@ -1,0 +1,108 @@
+2019-03-03 11:32:18.400  INFO 25380 --- [main] com.xadevpos.demo.DemoDevApplication     : Starting DemoDevApplication on opengg with PID 25380 (D:\workspace_dev\demo_dev\target\classes started by opengg in D:\workspace_dev\demo_dev)
+2019-03-03 11:32:18.406 DEBUG 25380 --- [main] com.xadevpos.demo.DemoDevApplication     : Running with Spring Boot v1.5.19.RELEASE, Spring v4.3.22.RELEASE
+2019-03-03 11:32:18.406  INFO 25380 --- [main] com.xadevpos.demo.DemoDevApplication     : No active profile set, falling back to default profiles: default
+2019-03-03 11:32:18.532  INFO 25380 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38af9828: startup date [Sun Mar 03 11:32:18 CST 2019]; root of context hierarchy
+2019-03-03 11:32:21.989  INFO 25380 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-03-03 11:32:22.030  INFO 25380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-03 11:32:22.030  INFO 25380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.37
+2019-03-03 11:32:22.190  INFO 25380 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2019-03-03 11:32:22.190  INFO 25380 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3665 ms
+2019-03-03 11:32:22.570  INFO 25380 --- [localhost-startStop-1] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-03 11:32:23.433  INFO 25380 --- [localhost-startStop-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-03 11:32:23.894  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-03 11:32:23.896  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-03-03 11:32:23.900  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-03 11:32:23.901  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-03 11:32:23.901  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-03 11:32:23.902  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-03 11:32:23.902  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-03 11:32:23.903  INFO 25380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'memberInfo' to urls: [/member/getInfoById/*]
+2019-03-03 11:32:24.349  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38af9828: startup date [Sun Mar 03 11:32:18 CST 2019]; root of context hierarchy
+2019-03-03 11:32:24.431  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/register],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.register(com.xadevpos.demo.param.AdminParam)
+2019-03-03 11:32:24.433  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/update],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.update(com.xadevpos.demo.model.Admin)
+2019-03-03 11:32:24.433  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/find],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.find()
+2019-03-03 11:32:24.433  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/delete/{id}],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.delete(java.lang.Long)
+2019-03-03 11:32:24.433  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/insert],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.insert(com.xadevpos.demo.model.Admin)
+2019-03-03 11:32:24.433  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/permission/{adminId}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.getPermissionList(java.lang.Long)
+2019-03-03 11:32:24.434  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/captcha]}" onto public java.lang.String com.xadevpos.demo.controller.AdminController.imagecode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-03 11:32:24.434  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/selectById/{id}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.selectById(java.lang.Long)
+2019-03-03 11:32:24.434  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/error]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.return_(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-03 11:32:24.435  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.login(com.xadevpos.demo.param.AdminParam)
+2019-03-03 11:32:24.435  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/member/getInfoById/{id}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.MemberController.getInfo(java.lang.Long)
+2019-03-03 11:32:24.436  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/insert],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.RoleController.insert(com.xadevpos.demo.model.Role)
+2019-03-03 11:32:24.439  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-03 11:32:24.440  INFO 25380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-03 11:32:24.485  INFO 25380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:32:24.485  INFO 25380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:32:24.533  INFO 25380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:32:25.030  INFO 25380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-03-03 11:32:25.032  INFO 25380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-03-03 11:32:25.032  INFO 25380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-03 11:32:25.037  INFO 25380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2019-03-03 11:32:25.038  INFO 25380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-03-03 11:32:25.087  INFO 25380 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-03-03 11:32:25.093  INFO 25380 --- [main] com.xadevpos.demo.DemoDevApplication     : Started DemoDevApplication in 7.276 seconds (JVM running for 8.701)
+2019-03-03 11:32:29.302  INFO 25380 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-03 11:32:29.303  INFO 25380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-03 11:32:29.329  INFO 25380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-03-03 11:32:29.603 DEBUG 25380 --- [http-nio-8080-exec-2] c.x.d.m.PermissionMapper.getURLList      : ==>  Preparing: select p.uri from db_admin a inner join db_admin_role_relation arr on a.id = arr.admin_id inner join db_role_permission_relation rpr on rpr.role_id = arr.role_id inner join db_permission p on p.id = rpr.permission_id where a.id = ? and p.uri is not null 
+2019-03-03 11:32:29.628 DEBUG 25380 --- [http-nio-8080-exec-2] c.x.d.m.PermissionMapper.getURLList      : ==> Parameters: 1(Long)
+2019-03-03 11:32:29.643 DEBUG 25380 --- [http-nio-8080-exec-2] c.x.d.m.PermissionMapper.getURLList      : <==      Total: 0
+2019-03-03 11:32:39.467 DEBUG 25380 --- [http-nio-8080-exec-3] c.x.d.m.PermissionMapper.getURLList      : ==>  Preparing: select p.uri from db_admin a inner join db_admin_role_relation arr on a.id = arr.admin_id inner join db_role_permission_relation rpr on rpr.role_id = arr.role_id inner join db_permission p on p.id = rpr.permission_id where a.id = ? and p.uri is not null 
+2019-03-03 11:32:39.468 DEBUG 25380 --- [http-nio-8080-exec-3] c.x.d.m.PermissionMapper.getURLList      : ==> Parameters: 1(Long)
+2019-03-03 11:32:39.469 DEBUG 25380 --- [http-nio-8080-exec-3] c.x.d.m.PermissionMapper.getURLList      : <==      Total: 0
+2019-03-03 11:33:45.378 DEBUG 25380 --- [http-nio-8080-exec-5] c.x.d.m.PermissionMapper.getURLList      : ==>  Preparing: select p.uri from db_admin a inner join db_admin_role_relation arr on a.id = arr.admin_id inner join db_role_permission_relation rpr on rpr.role_id = arr.role_id inner join db_permission p on p.id = rpr.permission_id where a.id = ? and p.uri is not null 
+2019-03-03 11:33:45.378 DEBUG 25380 --- [http-nio-8080-exec-5] c.x.d.m.PermissionMapper.getURLList      : ==> Parameters: 1(Long)
+2019-03-03 11:33:45.379 DEBUG 25380 --- [http-nio-8080-exec-5] c.x.d.m.PermissionMapper.getURLList      : <==      Total: 0
+2019-03-03 11:34:31.237  INFO 25380 --- [Thread-17] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38af9828: startup date [Sun Mar 03 11:32:18 CST 2019]; root of context hierarchy
+2019-03-03 11:34:31.241  INFO 25380 --- [Thread-17] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-03-03 11:34:31.241  INFO 25380 --- [Thread-17] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-03-03 11:34:31.254  INFO 25380 --- [Thread-17] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-03-03 11:34:35.285  INFO 20660 --- [main] com.xadevpos.demo.DemoDevApplication     : Starting DemoDevApplication on opengg with PID 20660 (D:\workspace_dev\demo_dev\target\classes started by opengg in D:\workspace_dev\demo_dev)
+2019-03-03 11:34:35.290 DEBUG 20660 --- [main] com.xadevpos.demo.DemoDevApplication     : Running with Spring Boot v1.5.19.RELEASE, Spring v4.3.22.RELEASE
+2019-03-03 11:34:35.290  INFO 20660 --- [main] com.xadevpos.demo.DemoDevApplication     : No active profile set, falling back to default profiles: default
+2019-03-03 11:34:35.378  INFO 20660 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9f158f: startup date [Sun Mar 03 11:34:35 CST 2019]; root of context hierarchy
+2019-03-03 11:34:37.817  INFO 20660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-03-03 11:34:37.967  INFO 20660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-03 11:34:37.968  INFO 20660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.37
+2019-03-03 11:34:38.107  INFO 20660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2019-03-03 11:34:38.107  INFO 20660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2734 ms
+2019-03-03 11:34:38.440  INFO 20660 --- [localhost-startStop-1] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-03 11:34:39.327  INFO 20660 --- [localhost-startStop-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-03 11:34:39.793  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-03 11:34:39.795  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-03-03 11:34:39.799  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-03 11:34:39.800  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-03 11:34:39.800  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-03 11:34:39.800  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-03 11:34:39.800  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-03 11:34:39.801  INFO 20660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'memberInfo' to urls: [/member/getInfoById/*]
+2019-03-03 11:34:40.239  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9f158f: startup date [Sun Mar 03 11:34:35 CST 2019]; root of context hierarchy
+2019-03-03 11:34:40.314  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/register],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.register(com.xadevpos.demo.param.AdminParam)
+2019-03-03 11:34:40.315  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/update],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.update(com.xadevpos.demo.model.Admin)
+2019-03-03 11:34:40.315  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/find],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.find()
+2019-03-03 11:34:40.315  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/delete/{id}],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.delete(java.lang.Long)
+2019-03-03 11:34:40.316  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/insert],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.insert(com.xadevpos.demo.model.Admin)
+2019-03-03 11:34:40.316  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/permission/{adminId}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.getPermissionList(java.lang.Long)
+2019-03-03 11:34:40.316  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/selectById/{id}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.selectById(java.lang.Long)
+2019-03-03 11:34:40.316  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/captcha]}" onto public java.lang.String com.xadevpos.demo.controller.AdminController.imagecode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-03 11:34:40.316  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.login(com.xadevpos.demo.param.AdminParam)
+2019-03-03 11:34:40.317  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/error]}" onto public java.lang.Object com.xadevpos.demo.controller.AdminController.return_(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-03 11:34:40.317  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/member/getInfoById/{id}],methods=[GET]}" onto public java.lang.Object com.xadevpos.demo.controller.MemberController.getInfo(java.lang.Long)
+2019-03-03 11:34:40.318  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/insert],methods=[POST]}" onto public java.lang.Object com.xadevpos.demo.controller.RoleController.insert(com.xadevpos.demo.model.Role)
+2019-03-03 11:34:40.320  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-03 11:34:40.321  INFO 20660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-03 11:34:40.362  INFO 20660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:34:40.362  INFO 20660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:34:40.412  INFO 20660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-03 11:34:40.916  INFO 20660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-03-03 11:34:40.918  INFO 20660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-03-03 11:34:40.918  INFO 20660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-03 11:34:40.923  INFO 20660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2019-03-03 11:34:40.924  INFO 20660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-03-03 11:34:40.976  INFO 20660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-03-03 11:34:40.981  INFO 20660 --- [main] com.xadevpos.demo.DemoDevApplication     : Started DemoDevApplication in 6.141 seconds (JVM running for 7.303)
+2019-03-03 11:35:34.364  INFO 20660 --- [Thread-15] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9f158f: startup date [Sun Mar 03 11:34:35 CST 2019]; root of context hierarchy
+2019-03-03 11:35:34.367  INFO 20660 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-03-03 11:35:34.368  INFO 20660 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-03-03 11:35:34.382  INFO 20660 --- [Thread-15] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

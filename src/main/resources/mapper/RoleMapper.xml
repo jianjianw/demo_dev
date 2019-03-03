@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xadevpos.demo.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.xadevpos.demo.model.Role">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="admin_count" jdbcType="INTEGER" property="adminCount" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    id, name, description, admin_count, create_time, status, sort
+    </sql>
+
+
+    <insert id="insert" parameterType="com.xadevpos.demo.model.Role">
+
+        insert into ums_role (name, description, admin_count,
+        create_time, status, sort
+        )
+        values (#{name}, #{description}, #{adminCount},
+        #{createTime}, #{status}, #{sort}
+        )
+    </insert>
+
+    <delete id="deleteByAdminId">
+        delete from db_admin_role_relation where admin_id = #{adminId}
+    </delete>
+
+    <insert id="insertList">
+        INSERT INTO db_admin_role_relation (admin_id, role_id) VALUES
+        <foreach collection="list" separator="," item="item" index="index">
+            (#{item.adminId},
+            #{item.roleId})
+        </foreach>
+    </insert>
+
+</mapper>
