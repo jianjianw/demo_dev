@@ -23,7 +23,8 @@ public class MyWebAppConfigurer extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/admin/login")
                 .excludePathPatterns("/admin/register")
                 .excludePathPatterns("/admin/getCaptcha")
-                .excludePathPatterns("/admin/verify_login");
+                .excludePathPatterns("/admin/verify_login")
+                .excludePathPatterns("/admin/nimei");
 
     }
 }

@@ -160,6 +160,11 @@ public class AdminController {
         }
         return null;
     }
+    @RequestMapping(value = "/nimei")
+    @ResponseBody
+    public String nimei(HttpServletRequest request, HttpServletResponse response) {
+        return "nimei";
+    }
 
 
     /**
