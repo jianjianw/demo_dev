@@ -1,6 +1,7 @@
 package com.xadevpos.demo.service;
 
 import com.xadevpos.demo.model.Admin;
+import com.xadevpos.demo.model.Music;
 import com.xadevpos.demo.model.Permission;
 import com.xadevpos.demo.param.AdminParam;
 import org.springframework.transaction.annotation.Transactional;
@@ -74,4 +75,8 @@ public interface AdminService {
      */
     @Transactional
     int updateRole(Long adminId, List<Long> roleIds);
+
+    public List<Music> selectMusic();
+
+    void insertMusic(List<Music> musicList);
 }

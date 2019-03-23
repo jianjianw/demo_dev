@@ -6,6 +6,7 @@ import com.xadevpos.demo.mapper.PermissionMapper;
 import com.xadevpos.demo.mapper.RoleMapper;
 import com.xadevpos.demo.model.Admin;
 import com.xadevpos.demo.model.AdminRoleRelation;
+import com.xadevpos.demo.model.Music;
 import com.xadevpos.demo.model.Permission;
 import com.xadevpos.demo.param.AdminParam;
 import com.xadevpos.demo.service.AdminService;
@@ -114,5 +115,16 @@ public class AdminServiceImpl implements AdminService {
             roleMapper.insertList(list);
         }
         return count;
+    }
+
+    @Override
+    public List<Music> selectMusic() {
+        List<Music> music = adminMapper.selectMusic();
+        return music;
+    }
+
+    @Override
+    public void insertMusic(List<Music> musicList) {
+        adminMapper.insertMusic(musicList);
     }
 }

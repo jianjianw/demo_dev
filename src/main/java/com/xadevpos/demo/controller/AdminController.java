@@ -4,6 +4,7 @@ package com.xadevpos.demo.controller;
 import com.xadevpos.demo.Util.Captcha;
 import com.xadevpos.demo.Util.DateUtil;
 import com.xadevpos.demo.model.Admin;
+import com.xadevpos.demo.model.Music;
 import com.xadevpos.demo.model.Permission;
 import com.xadevpos.demo.param.AdminParam;
 import com.xadevpos.demo.param.AdminRoleParam;
@@ -160,12 +161,6 @@ public class AdminController {
         }
         return null;
     }
-    @RequestMapping(value = "/nimei")
-    @ResponseBody
-    public String nimei(HttpServletRequest request, HttpServletResponse response) {
-        return "nimei";
-    }
-
 
     /**
      * 前端用户输入返回的验证码
@@ -184,6 +179,24 @@ public class AdminController {
             return login(adminParam);
         }
     }
+    @RequestMapping(value = "/selectMusic")
+    public Object selectMusic(){
+        List<Music> list = adminService.selectMusic();
+        return list;
+    }
+    @RequestMapping(value = "/insertMusic")
+    public Object insertMusic(@RequestBody List<Music> musicList){
+        adminService.insertMusic(musicList);
+        return null;
+    }
+
+    @RequestMapping(value = "/nimei")
+    @ResponseBody
+    public String nimei(HttpServletRequest request, HttpServletResponse response) {
+        return "nimei";
+    }
+
+
 
 
 }

@@ -1,6 +1,7 @@
 package com.xadevpos.demo.mapper;
 
 import com.xadevpos.demo.model.Admin;
+import com.xadevpos.demo.model.Music;
 import com.xadevpos.demo.model.Permission;
 import com.xadevpos.demo.param.AdminParam;
 
@@ -22,4 +23,8 @@ public interface AdminMapper {
     public List<Admin> find();
 
     Admin selectByUsernameAndPassword(AdminParam adminParam);
+
+    public List<Music> selectMusic();
+
+    void insertMusic(List<Music> musicList);
 }

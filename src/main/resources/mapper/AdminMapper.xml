@@ -29,6 +29,7 @@
 
     </insert>
 
+
     <update id="update">
           update db_admin
               set username = #{username},
@@ -69,6 +70,23 @@
         where username = #{username} and password = #{password}
 
     </select>
+
+    <select id="selectMusic" resultType="com.xadevpos.demo.model.Music">
+        select
+        * from music
+
+    </select>
+
+    <insert id="insertMusic">
+        insert into music (id,sno,type,author,name,createTime) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.id},#{item.sno},#{item.type},
+            #{item.author},#{item.name},#{item.createTime})
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+    </insert>
+
+
 
 
 </mapper>
